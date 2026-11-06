@@ -1,0 +1,81 @@
+# Banking & Risk Analytics Dashboard
+
+An interactive Power BI analytics solution designed to evaluate client risk, track portfolio growth, and support data-driven financial decision-making for loan approvals and deposit management.
+
+---
+
+## 📌 Project Overview
+
+### Problem Statement
+In financial services and banking, managing credit risk and portfolio liquidity is critical to minimizing financial losses. Lenders need a clear, interactive way to analyze applicant risk profiles, monitor total portfolio balances, and evaluate performance across demographic and operational segments.
+
+### Solution
+This Power BI dashboard provides an end-to-end analytics platform featuring key performance indicators (KPIs), segmentation visuals, and filtering capabilities. It allows credit analysts and branch managers to assess whether an applicant is likely to repay a loan, analyze deposit metrics, and inspect high-level organizational summaries.
+
+---
+
+## 📊 Dashboard Pages & Features
+
+### 1. 🏠 Home Page
+* **Landing Hub:** Clean navigation interface connecting users directly to Loan Analysis, Deposit Analysis, and Summary views.
+* **Financial Year Selector:** Interactive slice capability across multi-year data ($2017 - 2021$).
+* **High-Level Metrics:** Executive summary cards showing Total Clients, Total Loan ($2.43\text{T}$), Total Deposit ($2.09\text{T}$), Total Fees ($170.59\text{M}$), Total CC Amount ($126.58\text{M}$), and Saving Account Amount ($487.65\text{M}$).
+
+### 2. 💳 Loan Analysis Page
+* **KPI Metrics:** Visual tracking for Total Loan ($13.15\text{T}$), Bank Loan, Business Lending, and Credit Cards.
+* **Demographic Breakdown:**
+  * **Income Band Distribution:** Donut chart analyzing loans across High, Mid ($32.03\%$), and Low ($52.77\%$) income bands.
+  * **Nationality:** Bar chart illustrating loans by European, Asian, American, Australian, and African regions.
+  * **Occupation:** Detailed bar chart segmenting overall exposure across client professions.
+* **Branch Performance:** Column chart distribution of loans across individual Branch IDs ($1$ through $4$).
+
+### 3. 🏦 Deposit Analysis Page
+* Detailed view of deposit allocations, account types (Checking, Savings, Foreign Currency), and portfolio liquidity metrics across various client profiles.
+
+### 4. 📈 Summary Page
+* **Comprehensive Metrics Grid:** 12-card analytical grid showcasing:
+  * **Client Base:** Total Clients ($3\text{K}$)
+  * **Loan Portfolio:** Total Loan ($13.15\text{T}$), Bank Loan ($1.77\text{bn}$), Business Lending ($2.60\text{bn}$)
+  * **Deposit Portfolio:** Total Deposit ($11.30\text{T}$), Bank Deposit ($2.01\text{bn}$)
+  * **Account Breakdown:** Checking Account ($963.28\text{M}$), Saving Account ($698.73\text{M}$), Foreign Currency ($89.65\text{M}$), Credit Cards ($9.53\text{M}$), Engagement Accounts ($963.28\text{M}$), and Total Fees ($3\text{K}$).
+
+---
+
+## 🎛 Global Slicers & Filters
+
+Every analytical view includes top-level interactive slicers for granular data exploration:
+* **Branch Id:** Filter across branches ($1, 2, 3, 4$).
+* **Gender:** Segment by `Female` or `Male` applicant profiles.
+* **IA Id (Investment Advisor ID):** Filter metrics by specific investment advisor assignments.
+
+---
+
+## 🗄 Dataset & Data Model Structure
+
+The backend dataset connects multiple relational tables linked via primary and foreign key relationships:
+
+* **`Client-Banking`:** Core client details and financial profiles.
+* **`Banking Relationship`:** Linking table mapping accounts to client records.
+* **`Investment Advisor`:** Advisor assignments and metadata.
+* **`Gender`:** Demographic reference table.
+* **`Period`:** Time intelligence lookup table.
+
+### Data Cleaning & Transformations
+* Created custom calculated columns such as `Engagement Timeframe` within client records to track account tenure.
+* Cleaned and normalized foreign/primary key relationships to ensure cross-filtering accuracy across all dashboard pages.
+
+---
+
+## 🛠 Tools & Technologies Used
+
+* **Power BI Desktop:** Dashboard development, interactive reporting, DAX measures.
+* **Power Query:** ETL processes, data cleaning, table transformation.
+* **Data Modeling:** Star-schema relational structure using Primary & Foreign key links.
+
+---
+
+## 🚀 How to View the Project
+
+1. Clone or download this repository.
+2. Open the `.pbix` file using **Power BI Desktop**.
+3. Use the page navigation bar at the top or the Home page buttons to switch between views.
