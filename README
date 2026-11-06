@@ -60,20 +60,6 @@ The backend dataset connects multiple relational tables linked via primary and f
 * **`Gender`:** Demographic reference table.
 * **`Period`:** Time intelligence lookup table.
 
-### Data Cleaning & Transformations
-* Created custom calculated columns such as `Engagement Timeframe` within client records to track account tenure.
-* Cleaned and normalized foreign/primary key relationships to ensure cross-filtering accuracy across all dashboard pages.
-
----
-
-## 🛠 Tools & Technologies Used
-
-* **Power BI Desktop:** Dashboard development, interactive reporting, DAX measures.
-* **Power Query:** ETL processes, data cleaning, table transformation.
-* **Data Modeling:** Star-schema relational structure using Primary & Foreign key links.
-
----
-
 ## 🚀 How to View the Project
 
 1. Clone or download this repository.
